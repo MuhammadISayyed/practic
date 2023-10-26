@@ -6,7 +6,7 @@ type postProps = {
 }
 
 function PostPreview(props: postProps) {
-  return <Link href={props.slug}>{props.title}</Link>
+  return <Link href={`blog/${props.slug}`}>{props.title}</Link>
 }
 
 export default PostPreview

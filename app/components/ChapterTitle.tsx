@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 type titleProps = {
-  title: any
+  title: string
   slug: string
 }
 

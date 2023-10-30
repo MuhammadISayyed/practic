@@ -6,7 +6,6 @@ const getChaptersTitles = (guide: string) => {
   const chapters = fs.readdirSync(guideFolder)
   const markdownChapters = chapters.filter((chapter) => chapter.endsWith('.mdx'))
 
-  console.log(markdownChapters)
   const chaptersTitles = markdownChapters.map((title) => {
     const chapterContents = fs.readFileSync(`${guideFolder}/${title}`)
     const frontMatter = matter(chapterContents)

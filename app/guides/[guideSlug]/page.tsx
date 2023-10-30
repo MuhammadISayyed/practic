@@ -9,7 +9,7 @@ export default function GuidePage({ params }: { params: { guideSlug: string } })
       key={title.slug}
       title={title.title}
       guideSlug={params.guideSlug}
-      slug={title.slug}
+      chapterSlug={title.slug}
     />
   ))
 

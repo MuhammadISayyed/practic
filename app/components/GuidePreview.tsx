@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 type guideProps = {
-  title: string;
-  slug: string;
-};
+  title: string
+  slug: string
+}
 
 function GuidePreview(props: guideProps) {
   return (
@@ -12,7 +12,7 @@ function GuidePreview(props: guideProps) {
         <h2>{props.title}</h2>
       </Link>
     </div>
-  );
+  )
 }
 
-export default GuidePreview;
+export default GuidePreview

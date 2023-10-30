@@ -5,7 +5,12 @@ export default function GuidePage({ params }: { params: { guideSlug: string } })
   const guide = params.guideSlug
   const ChaptersTitles = getChaptersTitles(guide)
   const titles = ChaptersTitles.map((title) => (
-    <ChapterTitle key={title.slug} title={title.title} slug={title.slug} />
+    <ChapterTitle
+      key={title.slug}
+      title={title.title}
+      guideSlug={params.guideSlug}
+      slug={title.slug}
+    />
   ))
 
   return <div>{titles}</div>

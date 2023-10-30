@@ -2,8 +2,12 @@
 import { loadChapter } from '@/app/helpers/loadChapter'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
-async function Chapter({ params }) {
-  console.log(params)
+type chapterProps = {
+  chapterSlug: string
+  guideSlug: string
+}
+
+async function Chapter({ params }: { params: chapterProps }) {
   const { frontmatter, content } = await loadChapter(`${params.guideSlug}/${params.chapterSlug}`)
   return <MDXRemote source={content} />
 }
